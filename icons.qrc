@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/beer.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/champagne.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/drink.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/fish.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/food.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/food-1.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/pizza.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/sandwich.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/steak.png</file>
+        <file>J:/android/Halvarsson icons/my-icons-collection/png/turkey.png</file>
+    </qresource>
+</RCC>
