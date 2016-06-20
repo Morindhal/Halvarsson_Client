@@ -35,4 +35,5 @@ CONFIG += mobility c++11
 RESOURCES += \
     icons.qrc
 
+include(QtAwesome/QtAwesome.pri)
 

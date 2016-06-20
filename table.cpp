@@ -3,6 +3,7 @@
 #include "clickablelabel.h"
 #include "order.h"
 #include <vector>
+#include "QtAwesome/QtAwesome.h"
 
 Table::Table(QWidget *parent, int tTableNmbr, double tTab) :
     QDialog(parent),
@@ -11,9 +12,12 @@ Table::Table(QWidget *parent, int tTableNmbr, double tTab) :
     mTab(tTab)
 {
     ui->setupUi(this);
+    QtAwesome* awesome = new QtAwesome( qApp );
+    awesome->initFontAwesome();
     ClickableLabel* tLabel = new ClickableLabel("", this);
-    QLabel* tLabel2 = new QLabel(this);
-    tLabel->setPixmap(QPixmap(":/icons/steak.png"));
+    QLabel* tLabel2 = new QLabel("", this);
+    QPixmap tPix(":icons/pizza.png");
+    tLabel->setPixmap(tPix.scaled(30, 30));
     tLabel2->setText(QString("Bord:  ")  + QString(std::to_string(mTableNmbr).c_str()) );
     tLabel->setFixedWidth(65);
     ui->gridLayout->addWidget(tLabel );
