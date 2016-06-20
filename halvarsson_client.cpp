@@ -8,14 +8,12 @@ Halvarsson_client::Halvarsson_client(QWidget *parent) :
 {
     ui->setupUi(this);
     t = new Table(this);
-    //ui->Tables->addWidget(t);
     tVBox = new QVBoxLayout(ui->area);
-    //tVBox->setSizeConstraint(QLayout :: SetMinAndMaxSize);
 
     for(int n = 0 ; n<10 ; n++)
     {
-        arr[n] = new Table(this, n);
-        ui->tVBox->addWidget(arr[n]);
+        mTable.push_back(new Table(this, n));
+        ui->tVBox->addWidget(mTable.at(n));
     }
     ui->Tables->setWidget(ui->tVBox->widget());
     ui->area->setBackgroundRole(QPalette::Dark);

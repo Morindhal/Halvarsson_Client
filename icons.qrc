@@ -1,14 +1,14 @@
 <RCC>
-    <qresource prefix="/icons">
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/beer.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/champagne.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/drink.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/fish.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/food.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/food-1.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/pizza.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/sandwich.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/steak.png</file>
-        <file>J:/android/Halvarsson icons/my-icons-collection/png/turkey.png</file>
+    <qresource prefix="/">
+        <file>icons/beer.png</file>
+        <file>icons/champagne.png</file>
+        <file>icons/drink.png</file>
+        <file>icons/fish.png</file>
+        <file>icons/food-1.png</file>
+        <file>icons/food.png</file>
+        <file>icons/pizza.png</file>
+        <file>icons/sandwich.png</file>
+        <file>icons/steak.png</file>
+        <file>icons/turkey.png</file>
     </qresource>
 </RCC>

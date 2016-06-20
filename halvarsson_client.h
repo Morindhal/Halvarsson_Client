@@ -5,6 +5,7 @@
 
 class Table;
 class QVBoxLayout;
+class vector;
 
 namespace Ui {
 class Halvarsson_client;
@@ -25,7 +26,7 @@ private slots:
 private:
     Ui::Halvarsson_client *ui;
     Table *t;
-    Table *arr[50];
+    std::vector<Table*> mTable;
     QVBoxLayout *tVBox;
 };
 

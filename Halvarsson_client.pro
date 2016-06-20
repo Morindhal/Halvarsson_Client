@@ -30,7 +30,7 @@ FORMS    += halvarsson_client.ui \
     order.ui \
     attribute.ui
 
-CONFIG += mobility
+CONFIG += mobility c++11
 
 RESOURCES += \
     icons.qrc
