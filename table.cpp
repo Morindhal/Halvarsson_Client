@@ -3,7 +3,7 @@
 #include "clickablelabel.h"
 #include "order.h"
 #include <vector>
-#include "QtAwesome/QtAwesome.h"
+//#include "QtAwesome/QtAwesome.h"
 
 Table::Table(QWidget *parent, int tTableNmbr, double tTab) :
     QDialog(parent),
@@ -12,17 +12,24 @@ Table::Table(QWidget *parent, int tTableNmbr, double tTab) :
     mTab(tTab)
 {
     ui->setupUi(this);
-    QtAwesome* awesome = new QtAwesome( qApp );
-    awesome->initFontAwesome();
-    ClickableLabel* tLabel = new ClickableLabel("", this);
+    //QtAwesome* awesome = new QtAwesome( qApp );
+    //awesome->initFontAwesome();
     QLabel* tLabel2 = new QLabel("", this);
-    QPixmap tPix(":icons/pizza.png");
-    tLabel->setPixmap(tPix.scaled(30, 30));
-    tLabel2->setText(QString("Bord:  ")  + QString(std::to_string(mTableNmbr).c_str()) );
-    tLabel->setFixedWidth(65);
-    ui->gridLayout->addWidget(tLabel );
-    ui->gridLayout->addWidget(tLabel2);
-    connect(tLabel,SIGNAL(clicked()),this,SLOT(close()));
+    tLabel2->setText(QString(std::to_string(mTableNmbr+1).c_str()) );
+    tLabel2->setFont(QFont( "Arial", 30, QFont::Bold));
+    ui->Table_Nmbr->addWidget(tLabel2);
+    for(int i = 0 ; i<10 ; i++)
+        mOrders.push_back(new Order(this,"Ragu",20));
+    {
+        int i = 0, n = 0;
+        foreach (Order* var, mOrders)
+        {
+            ui->Table_Layout->addWidget(var, n%2, i);
+            ++n;
+            if(n%2== 0)
+                ++i;
+        }
+    }
 }
 
 Table::~Table()

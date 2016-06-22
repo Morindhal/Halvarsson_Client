@@ -1,6 +1,13 @@
 {
     "order":
     {
+        "Extra":
+        {
+            "Picture":"Extra.png",
+            "Description":"Add an attribute like drinks or addons without a primary order.",
+            "Free":
+            [[]]
+        },
         "Salmon Halvarsson":
         {
             "Picture":"Salmon_Halvarsson.png",
@@ -40,30 +47,67 @@
     },
     "attribute":
     {
-        "French Fries":
+        "Addons":
         {
-            "Picture":"French Fries.png",
-            "Price":12
+            "French Fries":
+            {
+                "Picture":"French Fries.png",
+                "Price":12
+            },
+            "Rice":
+            {
+                "Picture":"Rice.png",
+                "Price":15
+            },
+            "Baked Potato":
+            {
+                "Picture":"Baked_Potato.png",
+                "Price":20
+            },
+            "Mashed Potatoes":
+            {
+                "Picture":"Mashed_Potatoes.png",
+                "Price":15
+            },
+            "Potato Wedges":
+            {
+                "Picture":"Potato_Wedges.png",
+                "Price":12
+            }
         },
-        "Rice":
+        "Drinks"
         {
-            "Picture":"Rice.png",
-            "Price":15
-        },
-        "Baked Potato":
-        {
-            "Picture":"Baked_Potato.png",
-            "Price":20
-        },
-        "Mashed Potatoes":
-        {
-            "Picture":"Mashed_Potatoes.png",
-            "Price":15
-        },
-        "Potato Wedges":
-        {
-            "Picture":"Potato_Wedges.png",
-            "Price":12
+            "Coca-cola":
+            {
+                "Picture":"Coca-cola.png",
+                "Price":20
+            },
+            "Trocadero":
+            {
+                "Picture":"Trocadero.png",
+                "Price":15
+            },
+            "Trocadero Light":
+            {
+                "Picture":"Trocadero_Light.png",
+                "Price":15
+            },
+            "BBB Beer":
+            {
+                "Picture":"BBB.png",
+                "Price":20
+            },
+            "Falcon Bayersk":
+            {
+                "Picture":"Falcon_Bayersk.png",
+                "Price":20
+            },
+            "Champagne":
+            {
+                "Picture":"Champagne.png",
+                "Price":30
+            },
+            
         }
     }
 }

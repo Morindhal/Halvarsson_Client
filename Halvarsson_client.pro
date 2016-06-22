@@ -33,7 +33,8 @@ FORMS    += halvarsson_client.ui \
 CONFIG += mobility c++11
 
 RESOURCES += \
-    icons.qrc
+    icons.qrc \
+    config/config.qrc
 
 include(QtAwesome/QtAwesome.pri)
 

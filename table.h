@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::Table *ui;
-    std::vector<Order> mOrders;
+    std::vector<Order*> mOrders;
     double mTab;
 };
 

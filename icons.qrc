@@ -10,5 +10,9 @@
         <file>icons/sandwich.png</file>
         <file>icons/steak.png</file>
         <file>icons/turkey.png</file>
+        <file>icons/Five_Finger_Love_Punch.png</file>
+        <file>icons/Lemming_Ragu.png</file>
+        <file>icons/Moby_Dick's_Lasagna.png</file>
+        <file>icons/Salmon_Halvarsson.png</file>
     </qresource>
 </RCC>
