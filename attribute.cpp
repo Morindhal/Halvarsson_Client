@@ -14,3 +14,8 @@ Attribute::~Attribute()
 {
     delete ui;
 }
+
+QString Attribute::toJSON()
+{
+    return mAttributeName;
+}

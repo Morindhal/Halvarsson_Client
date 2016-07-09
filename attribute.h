@@ -14,10 +14,11 @@ class Attribute : public QWidget
 public:
     explicit Attribute(QWidget *parent = 0, QString tAttributeName = "default", double tPrice = 0);
     ~Attribute();
+    QString toJSON();
 
+    QString mAttributeName;
 private:
     Ui::Attribute *ui;
-    QString mAttributeName;
     double mPrice;
 };
 

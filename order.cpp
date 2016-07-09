@@ -2,13 +2,19 @@
 #include "ui_order.h"
 #include "clickablelabel.h"
 #include <vector>
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QDebug>
 #include "attribute.h"
+#include "table.h"
 
-Order::Order(QWidget *parent, QString tOrderName, double tPrice) :
+Order::Order(QWidget *parent, QString tOrderName, double tPrice, unsigned int tOrderID) :
     QWidget(parent),
     ui(new Ui::Order),
     mOrderName(tOrderName),
-    mPrice(tPrice)
+    mPrice(tPrice),
+    pOrderID(tOrderID)
 {
     ui->setupUi(this);
 
@@ -18,10 +24,45 @@ Order::Order(QWidget *parent, QString tOrderName, double tPrice) :
     tLabel->setFixedWidth(20);
     tLabel->setFixedHeight(20);
     ui->Order_Layout->addWidget(tLabel );
-    connect(tLabel,SIGNAL(clicked()),this,SLOT(close()));
+    mParentTable = (Table*)this->parent();
+    connect(tLabel,SIGNAL(clicked()),this,SLOT(closeMe()));
+    for(int i = 0 ; i<10 ; i++)
+    {
+        mAttribute.push_back(new Attribute(0, "Drinks"));
+    }
 }
 
 Order::~Order()
 {
     delete ui;
+}
+
+QString Order::toJSON()
+{
+    QJsonArray tAttributePackaging;
+    for(int i = 0 ; i<mAttribute.size() ; i++)
+        tAttributePackaging.prepend(mAttribute.at(i)->toJSON());
+    /*Package:
+            "table":X,
+            "OrderID":Y,
+            "Attribute":
+     * mParentTable->mTableNmbr;
+     * pOrderID;
+     * tAttributePackaging;
+     * into a JSon*/
+    QJsonObject tJsonObject;
+    tJsonObject.insert("table", mParentTable->mTableNmbr+1);
+    tJsonObject.insert("orderID", QString::number(pOrderID));
+    tJsonObject.insert("attribute", tAttributePackaging);
+
+    return QJsonDocument(tJsonObject).toJson();
+}
+
+void Order::closeMe()
+{
+    //qDebug() << "Here I am!  : " << mAttribute.at(1)->mAttributeName;
+    qDebug() << toJSON();
+    for(Attribute* Attributes : mAttribute)
+        delete Attributes;
+    mParentTable->closeOrder(pOrderID);
 }

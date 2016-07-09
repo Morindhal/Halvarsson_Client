@@ -2,6 +2,7 @@
 #define HALVARSSON_CLIENT_H
 
 #include <QMainWindow>
+#include <QtWebSockets/QWebSocket>
 
 class Table;
 class QVBoxLayout;
@@ -28,6 +29,11 @@ private:
     Table *t;
     std::vector<Table*> mTable;
     QVBoxLayout *tVBox;
+    QWebSocket m_webSocket;
+
+    void onTextMessageReceived(QString message);
+    void onConnected();
+    void closed();
 };
 
 #endif // HALVARSSON_CLIENT_H
