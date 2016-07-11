@@ -6,7 +6,7 @@
 class Vector;
 class Order;
 class Halvarsson_client;
-class QWidget;
+class QTabWidget;
 
 namespace Ui {
 class Table;
@@ -20,11 +20,16 @@ public:
     explicit Table(QWidget *parent = 0, int tTableNmbr = 0, double tTab = 0);
     int mTableNmbr;
     ~Table();
-    QString toJSON();
-    void addMenu(QWidget *tContainer);
+    std::vector<QJsonObject> toJSON();
+    void addMenu(QTabWidget *tContainer);
+    void displayOrders();
+    void updateTimer();
+
 
 public slots:
     void closeOrder(int tOrderID);
+    void addOrder(const QString &tPic, const QString &tName, const QString &tTime);
+    void newOrderEvent(const QString &tPic, const QString &tName, bool tKillTab = true);
 
 
     private slots:
@@ -35,6 +40,7 @@ public slots:
     std::vector<Order*> mOrders;
     double mTab;
     Halvarsson_client *mParentServerApp;
+    int mtemp;
 };
 
 #endif // TABLE_H

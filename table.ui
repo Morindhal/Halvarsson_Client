@@ -55,6 +55,13 @@
     </spacer>
    </item>
    <item>
+    <widget class="QLabel" name="tabletime">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="empty">
      <item>
       <widget class="QPushButton" name="pushButton">
@@ -83,7 +90,7 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>133</width>
+          <width>102</width>
           <height>60</height>
          </rect>
         </property>

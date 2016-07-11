@@ -14,5 +14,6 @@
         <file>icons/Lemming_Ragu.png</file>
         <file>icons/Moby_Dick's_Lasagna.png</file>
         <file>icons/Salmon_Halvarsson.png</file>
+        <file>icons/Extra.png</file>
     </qresource>
 </RCC>
