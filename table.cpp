@@ -37,7 +37,7 @@ Table::Table(QWidget *parent, int tTableNmbr, double tTab) :
 
     mParentServerApp = (Halvarsson_client*)parent;
 
-
+    tLabel2->setStyleSheet("QLabel { color : black; }");
     ui->tabletime->setStyleSheet("QLabel { color : black; }");
 }
 
